@@ -4,35 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/signin.css" rel="stylesheet">
-    <script src="/static/js/signin.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <label>
-          <p class="label-txt">ENTER YOUR EMAIL</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-        <label>
-          <p class="label-txt">ENTER YOUR NAME</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-        <label>
-          <p class="label-txt">ENTER YOUR PASSWORD</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-        <button type="submit">submit</button>
-      </form>
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-4 card-panel">
+          <form class="login-form">
+            <div class="row">
+              <div class="input-field col s12 center">
+                <!-- <img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login"/> -->
+                <p class="center login-form-text">LOGIN</p>
+              </div>
+            </div>
+            <div class="row margin">
+              <div class="input-field col s12">
+                <!-- <i class="mdi-social-person-outline prefix"></i> -->
+                <i class="material-icons prefix">account_circle</i>
+                <input id="username" name="username" type="text" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;"/>
+                <label for="username" data-error="wrong" class="center-align" data-success="right">Username</label>            
+              </div>
+            </div>
+            <div class="row margin">
+              <div class="input-field col s12">
+                <!-- <i class="mdi-action-lock-outline prefix"></i> -->
+                <i class="material-icons prefix">vpn_key</i>
+                <input id="password" name="password" type="password" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);"/>
+                <label for="password">Password</label>
+              </div>
+            </div>
+            
+            <div class="row">          
+              <div class="input-field col s12 login-text">               
+              <input type="checkbox" id="test6" checked="checked" />
+              <label for="test6" class="pointer-events">Remember me</label>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <button type="submit" class="btn waves-effect waves-light col s12">Login</button>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s6 m6 l6">
+                <p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
+              </div>
+              <div class="input-field col s6 m6 l6">
+                  <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+              </div>          
+            </div>
+          </form>
+        </div>
+      </div>
+        
 </body>
 </html>
-
