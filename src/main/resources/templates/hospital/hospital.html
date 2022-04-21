@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeStory 건강일기</title>
+</head>
+<body>
+    <div>
+        <h1>건강 일기</h1>
+        <div><input type="text" placeholder="병원이름을 적어주세요."></div>
+        <div></div><input type="text" placeholder="병원주소를 적어주세요."> 병원이름으로 검색하면 주소 나오게 할것 크롤링으로</div>
+
+
+
+       
+        
+        
+        <div>
+            <div><input type="text" placeholder="증상을 적어주세요."></div>
+            <div><input type="text" placeholder="내가 느낀 증상."></div>
+            <div><input type="text" placeholder="병원에서 말하는 진단명."></div>
+            
+        
+        </div>
+
+        <div>
+            <h1>약봉투</h1>
+            
+
+            <form method="post">
+                <div >
+                    <label for="chooseFile">
+                        👉 CLICK HERE! 👈
+                    </label>
+                </div>
+                <input type="file" accept="image/*" onchange="loadFile(this)">
+            </form>
+        </div>
+
+
+        <h1>밑에 요소를 다 토글로 구현할까? 선택할수 있도록?</h1>
+        <div>
+            오늘의 몸무게는?
+            키 : 날짜,  밸류 : 몸무게  배열 혹은 arraylist로 구현
+        </div>
+
+        <div>
+            오늘의 혈압
+            60<input type="range">200
+        </div>
+
+        <div>
+            오늘의 당
+            90<input type="range">300
+        </div>
+
+        <button>제출</button>
+    </div>
+</body>
+</html>

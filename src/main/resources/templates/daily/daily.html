@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeStory 일기</title>
+</head>
+<body>
+    <div>
+        <div>날짜지정
+            <input type="date">
+        </div>
+        <div>날씨 선택
+            <div>
+            맑음 <input type="radio">
+            구름 많음 <input type="radio">
+            비 <input type="radio">
+            눈 <input type="radio">
+            </div>
+        </div>
+        <div>사진업로드 1:1 비율
+            <form method="post">
+                <div >
+                    <label for="chooseFile">
+                        👉 CLICK HERE! 👈
+                    </label>
+                </div>
+                <input type="file" accept="image/*" onchange="loadFile(this)">
+            </form>
+        </div>
+        <div>글자 최대 1000자
+            <input type="text" maxlength="1000">
+        
+        </div>
+
+        <button>저장</button>
+    </div>
+</body>
+</html>
