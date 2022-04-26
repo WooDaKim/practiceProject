@@ -2,9 +2,9 @@
 
 # 프로젝트 설명서
 ##스펙
-### JAVA
-### SpringBoot
-### JPA
+### JAVA11, SpringBoot, JPA
+### Thymeleaf, BootStrap
+### InteliJ
 ### MYSQL
 
 ---------------------------------------------
@@ -26,6 +26,8 @@
    1. 휴대전화
 5. 이메일
    1. @adsfadsf형식
+6. 생일
+   1. 년도도 받을 것
 
 ##건강 => 건강일기
 1. 병원이름
