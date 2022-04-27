@@ -30,6 +30,10 @@ public class User  {
     private String email;
     @Column
     private String birth;
+    @Column
+    private String wight;
+    @Column
+    private String tall;
 
     @Builder
     public User(Long id, String userId, String passWord, String name, String phone, String email, String birth) {
