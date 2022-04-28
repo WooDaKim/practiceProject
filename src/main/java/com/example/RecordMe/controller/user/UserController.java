@@ -1,9 +1,8 @@
-package com.example.RecordMe.controller;
+package com.example.RecordMe.controller.user;
 
-import com.example.RecordMe.service.UserService;
+import com.example.RecordMe.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {

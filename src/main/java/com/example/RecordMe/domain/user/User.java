@@ -1,4 +1,4 @@
-package com.example.RecordMe.domain;
+package com.example.RecordMe.domain.user;
 
 import lombok.Builder;
 import lombok.Getter;
