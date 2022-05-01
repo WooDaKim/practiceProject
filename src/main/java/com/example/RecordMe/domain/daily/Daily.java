@@ -26,4 +26,12 @@ public class Daily {
     private String whether;
 
     private String text;
+
+    public Daily(Long id, LastModifiedDate date, String title, String whether, String text) {
+        this.id = id;
+        this.date = date;
+        this.title = title;
+        this.whether = whether;
+        this.text = text;
+    }
 }
