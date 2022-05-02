@@ -1,5 +1,6 @@
 package com.example.RecordMe.domain.daily;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -17,21 +19,34 @@ public class Daily {
 
     @Id
     @Column
+    /*인식하는 id(PK)*/
     private Long id;
 
-    private LastModifiedDate date;
-
+    /* 제목 */
     private String title;
 
+    /* 날씨 */
     private String whether;
 
-    private String text;
+    /* 내용 */
+    private String content;
 
-    public Daily(Long id, LastModifiedDate date, String title, String whether, String text) {
-        this.id = id;
-        this.date = date;
+    /* 비밀여부 */
+    private String secret;
+
+    /* 생성일 */
+    private LocalDateTime createDate = LocalDateTime.now();
+
+    /* 수정일 */
+    private LocalDateTime modifiedDate;
+
+    @Builder
+    public Daily(String title, String whether, String content, String secret, LocalDateTime createDate, LocalDateTime modifiedDate) {
         this.title = title;
         this.whether = whether;
-        this.text = text;
+        this.content = content;
+        this.secret = secret;
+        this.createDate = createDate;
+        this.modifiedDate = modifiedDate;
     }
 }
