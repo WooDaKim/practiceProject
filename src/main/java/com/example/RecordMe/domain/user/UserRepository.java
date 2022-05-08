@@ -1,6 +1,5 @@
-package com.example.RecordMe.Repository.user;
+package com.example.RecordMe.domain.user;
 
-import com.example.RecordMe.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

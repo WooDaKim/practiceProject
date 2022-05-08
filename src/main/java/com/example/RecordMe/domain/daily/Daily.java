@@ -1,5 +1,6 @@
 package com.example.RecordMe.domain.daily;
 
+import com.example.RecordMe.domain.time.TimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Daily {
+public class Daily extends TimeEntity {
 
     @Id
     @Column
@@ -41,7 +42,8 @@ public class Daily {
     private LocalDateTime modifiedDate;
 
     @Builder
-    public Daily(String title, String whether, String content, String secret, LocalDateTime createDate, LocalDateTime modifiedDate) {
+    public Daily(Long id, String title, String whether, String content, String secret, LocalDateTime createDate, LocalDateTime modifiedDate) {
+        this.id = id;
         this.title = title;
         this.whether = whether;
         this.content = content;
