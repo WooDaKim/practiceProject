@@ -3,8 +3,11 @@ package com.example.RecordMe.controller.daily;
 import com.example.RecordMe.dto.daily.DailyDto;
 import com.example.RecordMe.service.daily.DailyService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class DailyController {
@@ -16,7 +19,10 @@ public class DailyController {
     }
 
     @GetMapping("/")
-    public String list() {
+    public String list(Model model) {
+        List<DailyDto> dailyDtoList = dailyService.getDailyList();
+        model.addAttribute("dailyList", dailyDtoList);
+
         return "daily/list.html";
     }
 

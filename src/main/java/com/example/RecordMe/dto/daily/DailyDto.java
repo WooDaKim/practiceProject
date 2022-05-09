@@ -1,10 +1,7 @@
 package com.example.RecordMe.dto.daily;
 
 import com.example.RecordMe.domain.daily.Daily;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -32,4 +29,14 @@ public class DailyDto {
 
     }
 
+    @Builder
+    public DailyDto(Long id, String writer, String whether, String title, String content, LocalDateTime createDate, LocalDateTime modifiedDate) {
+        this.id = id;
+        this.writer = writer;
+        this.whether = whether;
+        this.title = title;
+        this.content = content;
+        this.createDate = createDate;
+        this.modifiedDate = modifiedDate;
+    }
 }
