@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import static jdk.nashorn.internal.runtime.Debug.id;
 
 @Service
 public class DailyService {
@@ -23,6 +26,7 @@ public class DailyService {
         return dailyRepository.save(dailyDto.toEntity()).getId();
     }
 
+    @Transactional
     public List<DailyDto> getDailyList() {
         List<Daily> dailys = dailyRepository.findAll();
         List<DailyDto> dailyDtoList = new ArrayList<>();
@@ -40,5 +44,21 @@ public class DailyService {
         }
 
         return dailyDtoList;
+    }
+
+    @Transactional
+    public DailyDto getPost(Long id) {
+        Optional<Daily> dailyWrapper = dailyRepository.findById(id);
+        Daily daily = dailyWrapper.get();
+
+        DailyDto dailyDto = DailyDto.builder()
+                .id(daily.getId())
+                .title(daily.getTitle())
+                .content(daily.getContent())
+                .writer(daily.getWriter())
+                .createDate(daily.getCreateDate())
+                .build();
+
+
     }
 }
