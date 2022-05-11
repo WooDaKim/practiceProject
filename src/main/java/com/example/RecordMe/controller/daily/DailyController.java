@@ -4,9 +4,7 @@ import com.example.RecordMe.dto.daily.DailyDto;
 import com.example.RecordMe.service.daily.DailyService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -45,4 +43,26 @@ public class DailyController {
         model.addAttribute("dailyDto", dailyDto);
         return "daily/detail.html";
     }
+
+    @GetMapping("/post/edit/{no}")
+    public String edit(@PathVariable("no") Long id, Model model) {
+        DailyDto dailyDto = dailyService.getPost(id);
+
+        model.addAttribute("dailyDto", dailyDto);
+        return "daily/update.html";
+    }
+
+    @PutMapping("/post/edit/{no}")
+    public String update(DailyDto dailyDto) {
+        dailyService.savePost(dailyDto);
+        return "redirect:/";
+    }
+
+    @DeleteMapping("/post/{no}")
+    public String delete(@PathVariable("no") Long id) {
+        dailyService.deletePost(id);
+
+        return "redirect:/";
+    }
+
 }

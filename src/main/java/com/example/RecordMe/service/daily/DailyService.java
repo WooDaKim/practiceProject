@@ -61,4 +61,9 @@ public class DailyService {
 
 
     }
+
+    @Transactional
+    public void deletePost(Long id) {
+        dailyRepository.deleteById(id);
+    }
 }
