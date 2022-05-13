@@ -65,4 +65,13 @@ public class DailyController {
         return "redirect:/";
     }
 
+    @GetMapping("/daily/search")
+    public String search(@RequestParam(value = "keyword") String keyword, Model model) {
+        List<DailyDto> dailyDtoList = dailyService.searchPosts(keyword);
+        model.addAttribute("boardList", dailyDtoList);
+
+        return "daily/list.html"
+    }
+
+
 }
