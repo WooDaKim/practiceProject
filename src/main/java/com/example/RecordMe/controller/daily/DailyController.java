@@ -18,9 +18,12 @@ public class DailyController {
     }
 
     @GetMapping("/")
-    public String list(Model model) {
+    public String list(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum) {
         List<DailyDto> dailyDtoList = dailyService.getDailyList();
+        Integer[] pageList = dailyService.getPageList(pageNum);
+
         model.addAttribute("dailyList", dailyDtoList);
+        model.addAttribute("pageList", pageList);
 
         return "daily/list.html";
     }
@@ -70,8 +73,9 @@ public class DailyController {
         List<DailyDto> dailyDtoList = dailyService.searchPosts(keyword);
         model.addAttribute("boardList", dailyDtoList);
 
-        return "daily/list.html"
+        return "daily/list.html";
     }
+
 
 
 }
