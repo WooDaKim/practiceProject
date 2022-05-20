@@ -51,4 +51,7 @@ public class Daily extends TimeEntity {
         this.createDate = createDate;
         this.modifiedDate = modifiedDate;
     }
+
+    public String getWriter() {
+    }
 }

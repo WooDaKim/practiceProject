@@ -71,7 +71,7 @@ public class DailyService {
                 .createDate(daily.getCreateDate())
                 .build();
 
-
+return null;
     }
 
     @Transactional
