@@ -104,3 +104,10 @@
 
 가장 신경써야할것 보안관련
 
+
+
+------------------------------------------
+화면 기획
+링크참고
+https://ovenapp.io/view/LFHjwcBBtZ4SaNIcNRfx5sOp8NfcHfbX/
+
